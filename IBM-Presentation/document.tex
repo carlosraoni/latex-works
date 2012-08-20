@@ -2,17 +2,6 @@
 
 \documentclass{beamer}
 
-% Copyright 2003 by Till Tantau <tantau@cs.tu-berlin.de>.
-%
-% This program can be redistributed and/or modified under the terms
-% of the LaTeX Project Public License Distributed from CTAN
-% archives in directory macros/latex/base/lppl.txt.
-
-%
-% The purpose of this example is to show how \part can be used to
-% organize a lecture.
-%
-
 %\usetheme{Warsaw}
 %\usetheme{Dresden}
 %\usetheme{Berlin}
@@ -39,721 +28,1235 @@
 
 %\newtheorem{example}[theorem]{Example}
 
-%
-% The following info should normally be given in you main file:
-%
-
-\title{Upper Bounds for Minimum Short Covering Codes by Reactive Tabu Search}
-
-%\titlerunning{Robust BCP algorithms for Vehicle Routing Problems}
-
-% Use \titlerunning{Less Verbose Running Title} for an abbreviated version of
-% your contribution title if the original one is too long
-%\author{U.R.~Alone}  % for single-authored works, omit \inst{1}
-
-\author[SBPO 2007 - Mendes, Carmelo, Poggi]{Carlos Raoni Mende$\mbox{s}^1$, Marcus Poggi de Arag\~a$\mbox{o}^1$, Emerson Monte Carmel$\mbox{o}^2$}
-
-\institute{$\mbox{}^1$Pontif\'\i cia Universidade Cat\'olica do Rio de Janeiro \\
-\texttt{\{cmendes, poggi\}@inf.puc-rio.br}\\
-~\\
-~\\
-$\mbox{}^2$Universidade Estadual de Maring\'a\\
-\texttt{elmcarmelo@uem.br} }
-
-
-%\title{Beamer Example on Parts}
-%\author{Till~Tantau}
-%\institute{
-%  Fakultï¿½t fï¿½r Elektrotechnik und Informatik\\
-%  Technical University of Berlin}
-
+\title{IBM Research Seminar}
+\author{Carlos Raoni de Alencar Mendes}
+\institute{Software Engineer - Petrobras \\
+\texttt{carlosraoni@gmail.com} }
 
 \begin{document}
 
 
 \frame{\titlepage}
 
-
-\section*{Outlines}
-
-
-%=============================
-
 \begin{frame}
+	\scriptsize
   \tableofcontents[pausesections]
 \end{frame}
 
-\section{Introduction}
-\subsection{Covering Codes}
-
-\begin{frame}<1>
-  \frametitle{Covering Codes}
-% 4 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-{
-  \begin{definition}
-    Given integers $q\geq 2$, $n\geq 1$ and $R\geq 0,$ we denote $K_{q}(n,R)$ as
-the minimum cardinality of a set of codewords $C$ in any (linear or
-nonlinear) $q$-ary code of length $n$ such that for every word $x$, there is
-a codeword $c$ in $C$ in which $x$ and $c$ disagree in at most $R$
-coordinates.
-  \end{definition}
-}
-
-\end{frame}
+\section{Resume}
+\subsection{Education}
 
 \begin{frame}
-  \frametitle{Covering Codes}
-% 4 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
+  \frametitle{Education}
 {
-  \begin{itemize}
-  	\item<1-> These numbers were posed for $R=1$ by Taussky and Todd(1948).
-  	\item<2-> An interesting application is the football pool problem. In this problem one wants
-to find the minimum number of bets that will miss at most one game. 
-		\item<3-> Evaluating of $K_{q}(n,R)$ has resisted a series of mathematical and
-computational attacks for more than 55 years. 
-		\item<4-> In particular, many results on
-$K_{q}(n,R)$ have been obtained by using computational tools: tabu search and
-other probabilistic algorithms (see Cohen et al.(1997) and Honkala and ï¿½stergard(1997)). 
+	\begin{itemize}
+		\item<1-> {\bf Ph.D.}, Computer Science, Pontifical Catholic University of Rio
+		de Janeiro (PUC-RJ), 2012 - Present.			
+  		\item<2-> {\bf M.Sc.}, Computer Science, Pontifical Catholic University of
+  		Rio de Janeiro (PUC-RJ), 2007 - 2009.
+  			\begin{itemize}
+			  \item GPA (ranging from 0 to 10): 9.6
+			  \item Classes on Algorithm Analysis, Machine Learning, Combinatorial
+			  Optimization, Linear Programming, Information Retrieval and Search Engines, among others.
+			  \item I was the only Computer Science master student of PUC-RJ to publish in 2009 a paper in a high 
+qualified international journal according to criteria of Brazilian foundation
+for supporting academic research (CAPES).
+			\end{itemize}
+  		\item<3-> {\bf B.Sc.}, Computer Science, Federal University of Rio Grande do
+  		Norte (UFRN), 2002 - 2006.
+  			\begin{itemize}
+			  \item GPA (ranging from 0 to 10): 9.132
+			  \item Second best GPA
+			\end{itemize}
   \end{itemize}
 }
 
 \end{frame}
 
-\subsection{Short Covering Codes}
+\subsection{Research scholarship (UFRN), 2004 - 2006}
 
 \begin{frame}
-  \frametitle{Short Covering Codes}
-% 5 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
+	\frametitle{Research scholarship (UFRN), 2004 - 2006}
 {
 	
-	\begin{itemize}
-		\item In this work we focus on a recent generalized variant of $K_{q}(n,R)$ proposed by Monte Carmelo et al.(2005).
-	\end{itemize} \pause
-	
-	\begin{definition}
-	Let $\Bbb{F}_{q}$ denote the finite field with $q$ elements. Define
-$c_{q}(n,R)$ as the minimum cardinality of a subset $H$ of
-$\mbox{$I\!\! F\!$}_{q}^{n}$ such that every word in this space differs in at most $R$
-coordinates from a multiple of a vector in $H$.
-	\end{definition}
-
-	\begin{itemize}
-		\item The goal of this work is to improve the known upper bounds on $c_{q}(n,R)$ by the use of a metaheuristic
-based on a variation of tabu search, the reactive tabu search.
-	\end{itemize}
-
+	  \begin{itemize}
+	    \item<1-> Development of a new evolutionary multi-objective algorithm
+	    for optimization of treatment planning of conformal radiation therapy.
+		\begin{figure}[ht]
+			\begin{minipage}[b]{0.45\linewidth}
+				\centering
+				\includegraphics[width=0.80\textwidth]{images/front.png}
+				\label{fig:pareto}				
+			\end{minipage}
+			\hspace{0.5cm}
+			\begin{minipage}[b]{0.45\linewidth}
+				\centering
+				\includegraphics[width=0.80\textwidth]{images/trans1.PNG}
+				\label{fig:transsolution}				
+			\end{minipage}
+		\end{figure}
+		\begin{itemize}
+			\item<2-> Published paper in brazilian journal \textbf{Pesquisa
+			Operacional (Operations Research)}: \textit{Evolutionary algorithm to
+			optimize the treatment plan in 3D conformal radiotherapy}, 2009.
+			\item<3-> Published extended abstract in proceedings of the international
+			conference \textbf{23rd Annual ACM Symposium on Applied Computing}:
+			\textit{Selecting beam directions in radiotherapy with an evolutionary algorithm}, 2008.  
+		\end{itemize}
+		
+	  \end{itemize}	  		
 }
 \end{frame}
 
-
-\section{Theorical Bounds on Short Covering Codes}
-
-\subsection{Definitions}
+\subsection{Research scholarship (PUC-Rio), 2007 - 2009}
 
 \begin{frame}
-  \frametitle{Definitions}
-{	\footnotesize
-  \begin{definition}
-  For $n\geq 1$ and $q\geq 2,$ let $V_{q}^{n}\,$be the set of all words $%
-x=(x_{1},x_{2},\ldots ,x_{n})$ with length $n$ and components $x_{i}$ taken on
-any alphabet of $q$ symbols. 
-  \end{definition}
-  
+	\frametitle{Research scholarship (PUC-Rio), 2007 - 2009}
+{
 	\begin{itemize}
-		\item This set becomes a metric space by defining the
-\textit{Hamming distance} $d(x,y)$ between the words $x$ and $y$ as the
-number of components in which $x$ and $y$ differ.
-		\item The \textit{\ sphere }of
-center $x$ and radius $R$ is denoted by $B(x,R)=\{y\in
-V_{q}^{n}:\,\,d(x,y)\leq R\}.$
+	  \item<1-> Member of the development and research team of PRONAV project.
+	  \item<2-> Optimization module to assist the programming of ships routes (and
+	  operations) in order to take care of the products transport demands of
+	  Petrobras.	  
+	  \item<3-> Main technologies: C++ and CPLEX solver.
+	  \item<4-> Multi-Commodity Network Flow based MIPs.	  	    	  
 	\end{itemize}
-	
-	\begin{definition}
-	 A subset $C$ is an $R$-\textit{covering }of $%
-V_{q}^{n}$ when $
-%\[
-\bigcup_{c\in C}B(c,R)=V_{q}^{n}. $
-%\]
-	\end{definition}
-	
-\begin{itemize}
-	\item The number $K_{q}(n,R)$ denotes the minimum cardinality of an $R$%
-\textit{-}covering of $V_{q}^{n}.$
-\end{itemize}
 }
-
 \end{frame}
 
-\begin{frame}<1>
-  \frametitle{Definitions}
+\begin{frame}
+	\frametitle{Research scholarship (PUC-Rio), 2007 - 2009}
+{
+	\begin{figure}[htbp]			
+		\centering
+		\includegraphics[width=0.60\textwidth]{images/navios.png}
+		\label{fig:navios}
+		\caption{\small{Ships Routes}}							
+	\end{figure}	
+	\begin{figure}[htbp]			
+		\centering
+		\includegraphics[width=0.60\textwidth]{images/estoques.png}
+		\label{fig:estoques}
+		\caption{\small{Oil Platforms Storage}}							
+	\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Research scholarship (PUC-Rio), 2007 - 2009}
+{
+	\begin{itemize}
+	  \item<1-> Development of heuristic algorithms for covering codes problems.
+	  \item<2-> Master's Thesis Research Theme.  
+	  \item<3-> Published paper in the international journal \textbf{Discrete
+	  Applied Mathematics}: \textit{Bounds for short covering codes and reactive tabu search}, 2009.	  
+	  \item<4-> Published paper in proceedings of \textbf{XXXIX Brazilian
+	  Symposium of Operational Research}: \textit{Upper Bounds for Minimum Short 
+Covering Codes by Reactive Tabu Search}, 2007.	  	    	  
+	\end{itemize}
+}
+\end{frame}
+
+\subsection{Software Engineer(Petrobras), 2008 - Present}
+
+\begin{frame}
+	\frametitle{Software Engineer(Petrobras), 2008 - Present}
+{
+	\begin{itemize}
+	  \item<1->Object-oriented architecture, design and development of Desktop and
+	  Web-Based enterprise systems.
+	  \item<2->Main technologies: Java EE (EJB 3, JMS, Web Services), C\# .Net,
+	  Oracle Database and others.
+	  \item<3->Past project: a torque calculation system for screws of bolted
+	  joints. Software developed in C\# .Net.
+	\end{itemize}		 
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Software Engineer (Petrobras), 2008 - Present}
+{	 
+	\begin{figure}[htbp]			
+		\centering
+		\includegraphics[width=0.70\textwidth]{images/ccta.JPG}
+		\label{fig:ccta}
+		\caption{\small{Business Value Maximization Award of Systems Development
+		Department of Information Technology and Communications (ITC) Division, 2010}}							
+	\end{figure}
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Software Engineer (Petrobras), 2008 - Present}
+{
+	\begin{itemize}
+	  \item<1->Current project: an enterprise system to control fluid transfers operations in refinery plants, in order to transform crude oil into more useful petroleum 
+products, such as gasoline, diesel fuel and kerosene. 
+	  \item<2->Java swing client that shows and controls the status of the fluid
+	  transfers, refinery equipments, commands to equipments, and so on. 
+	  \item<3->The client interacts with the back-end system developed in EJB 3:
+	  	\begin{itemize}
+	  	  \item JMS Topics and Queues
+	  	  \item XA Transactions
+	  	  \item Web Services, and so on
+	  	\end{itemize}
+	 \item<4-> Integration with a planning system through EJB technology and with
+	 an automation system through a CORBA interface.
+	 \item<5-> Individual Distinction Award of the ITC division for the outstanding
+	 work performance in 2011.
+	\end{itemize}		 
+}
+\end{frame}
+
+\subsection{Problem Solving Competitions}
+
+\begin{frame}
+	\frametitle{Problem Solving Competitions}
+{
+	\begin{itemize}
+	  \item<1->Algorithm analysis and programming competitions.
+	  \item<2->\textbf{ACM International Collegiate Programming Contest} - Brazil:
+	  Four times Brazilian finalist, from 2004 to 2007.
+	  \item<3->\textbf{Google Code Jam Latin America 2007}: Advancer of
+	  Qualification Round and Online Round 1, finishing in Top 70 in semifinals.
+	  \item<4->\textbf{ACM UVA Problem Solving Website}: As an undergrad I was in
+	  the Brazilian Top 30 and World Top 500 at the ACM UVA (acm.uva.es) problem solvers ranking with 305 solved problems.
+	  \item<5->\textbf{ProjectEuler.net Website}: Top 30 of the ProjectEuler.net
+	  Brazilian ranking with 101 solved problems.
+	\end{itemize}		 
+}
+\end{frame}
+
+\section{Códigos de Cobertura}
+
+\begin{frame}
+  \frametitle{Códigos de Cobertura: Limites e Heurísticas}
 {	
-  \begin{definition}
-A subset $H$ in $\Bbb F_{q}^{n}$ is an $R$-\textit{short
-covering\ of }$ \Bbb F_{q}^{n}$ \textit{\ }when
-$ \Bbb F_{q}.H=\{\alpha h,\alpha \in \Bbb F_{q}$ and $h\in H\}$ is a $R$%
--covering of $\Bbb F_{q}^{n}$. 
- \end{definition}
-  
-  \begin{definition}
-\[
-c_{q}(n,R)=\min \{\ \left| H\right| :H \mbox{ is an } R
-\mbox{-short
-covering of } \Bbb F_{q}^{n}\mathit{\ }\}.
-\]
-  \end{definition}
-	
-}
-
-\end{frame}
-
-\subsection{Theorical Bounds}
-
-\begin{frame}<1>
-  \frametitle{Theorical Upper Bound}
-% 7 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-{
-
-\begin{proposition}
-\label{ls}For every prime power $q$, and every $n$ and $R$ such that $0\leq $
-$R<n,$ the following upper bound holds
-\[
-c_{q}(n,R)\leq \frac{q^{n-R}-1}{q-1}.
-\]
-\end{proposition}
- 
-}
-\end{frame}
-
-\begin{frame}<1>
-  \frametitle{Theorical Lower Bounds}
-% 7 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-{
-\footnotesize
 \begin{itemize}
-	\item  Let $v$ denote the number of vectors in a sphere of $%
-\mbox{$I\!\!
-F\!$}_{q}^{n}$ with radius $R$, that is, $v=1+\sum_{i=1}^{R}{n \choose i}%
-(q-1)^{i}$.
-\end{itemize}
-
-\begin{proposition}
-\label{li}For every prime power $q,$%
-\[
-c_{q}(n,R)\geq \left\lceil \frac{q^{n}-v}{(q-1)v}\right\rceil .
-\]
-\end{proposition}
-
-
-\begin{theorem}
-\label{cone1}For a prime power $q$, and $n>R>0$,
-\[
-c_{q}(n,R)\geq \left\lceil \frac{K_{q}(n,R)-1}{(q-1)}\right\rceil .
-\]
-\end{theorem}
-}
-\end{frame}
-
-\section{Short Covering Codes and Dominating Sets in Graphs}
-
-\begin{frame}<1>
-  \frametitle{Short Covering Codes and Dominating Sets in Graphs}
-% 7 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-{
-%\footnotesize
-\begin{definition}
-Let $G=(V,E)$ be an undirected graph with node set $V$ and edge set $E$. The node set
-$U \subseteq V$ is said to be a dominating set of $G$ if, for every node $v$ in $V$, either
-$v$ is in $U$ or there exists a node $u$ in $U$ such that $u$ is adjacent to $v$ ({\em
-i.e.}, $(u,v) \in E$).
-\end{definition}
-
-\begin{itemize}
-	\item The dominating set problem is the problem of finding a dominating
-set in the graph whose size is minimum. 
-	\item This problem is {\em NP}-hard (see Garey and Johnson (1979)). 
-\end{itemize}
-
-}
-\end{frame}
-
-\begin{frame}<1>
-  \frametitle{Short Covering Codes and Dominating Sets in Graphs}
-% 7 \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-{
-%\footnotesize
-
-\begin{itemize}
-	
-	\item Given the set $V_k^n$ of all $n$-dimensional vectors with components in $\{ 0,
-1,\ldots,k-1 \}$ and an integer $R$ with $0 \leq R \leq n$, consider the graph $G(n,k,R)=(V,E)$ constructed as follows:
+	\item<1-> Compressão de dados, codificação digital da fala, telecomunicações via celular, correção de erros de transmissão, são algumas das aplicações práticas do estudo dos códigos de cobertura.
+	\item<2-> Neste trabalho são abordados dois problemas de códigos de cobertura: 
 	\begin{enumerate}
-		\item For each vector $x$ in $V_k^n$ we associate a node $x$ in $V$.
-		\item Put the edge $e=(x,y)$ in $E$ if and only if there is a vector $x$ and a vector $m(y)$ multiple of the vector $y$ that satisfy $0 < d(x,m(y)) \leq R$. 
+		\item<3-> O problema clássico de códigos de cobertura.
+		\item<4-> O recente problema denominado de códigos curtos de cobertura.
 	\end{enumerate}
+	\item<5-> Apresentamos uma aplicação da metaeurística Busca Tabu Reativa (BTR)
+	aos problemas citados.
+	\item<6-> O trabalho também proprõe uma nova heurística baseada em duas 
+	técnicas já bastante estabelecidas na área de otimização combinatória, a geração atrasada de colunas e as buscas locais.
+\end{itemize}
+}
+\end{frame}
 
-	\item Dominating sets in $G(n,k,R)$ are in one-to-one correspondence with the $R$-short-covering codes in $V_k^n$. 
-	\item A minimum $R$-short-covering code in $V_k^n$ can be found by solving the minimum dominating set problem in $G(n,k,R)$.
+
+\begin{frame}
+  \frametitle{Códigos de Cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> Dada uma loteria esportiva de futebol onde as apostas consistem em marcar se o time da casa vence, empata ou perde para cada jogo de uma rodada do campeonato.
+	\item<2-> Se tivermos uma rodada de 6 jogos são possíveis $3^6=729$ cartelas de aposta.
+	\item<3-> Se estivermos satisfeitos em receber o segundo prêmio da loteria, ou seja, errar no máximo um resultado, qual seria o menor número de cartelas que precisaríamos comprar para garantir este segundo prêmio? 400? 300? 200? 
+	\item<4-> Atualmente não é possível responder esta pergunta, sabemos apenas que seriam no mínimo 71 cartelas e no máximo 73.
+	\item<5-> Este problema é uma das aplicações mais famosas dos códigos de cobertura, é chamado \textit{football pool problem}.
+\end{itemize}
+}
+\end{frame}
+
+\subsection{Definições Básicas da Teoria dos Códigos}
+
+\begin{frame}
+  \frametitle{Definições Básicas da Teoria dos Códigos}
+{
+	
+\begin{itemize}
+	\item<1-> Seja o conjunto $\Bbb{F}_{q}$ de $q$ símbolos $\Bbb{F}_{q} = \{0, 1, ..., q-1\}$, chamamos $\Bbb{F}_{q}$ de alfabeto.
+	\item<2-> Quando $q$ é uma potência de primo é conveniente considerar $\Bbb{F}_{q}$ como um corpo finito (\textit{finite field}) de $q$ elementos.
+	\item<3-> Chamamos de palavras os vetores de tamanho $n$ de elementos do alfabeto $\Bbb{F}_{q}$.
+	\item<4-> $\Bbb{F}_{q}^{n}$ representa o conjunto de todas as palavras de tamanho $n$ sobre $\Bbb{F}_{q}$.
+	\item<5-> Denomina-se código q-ário qualquer subconjunto não vazio de $\Bbb{F}_{q}^{n}$.
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Definições Básicas da Teoria dos Códigos}
+{
+	Exemplificando cada conceito, seja $n=3$ e $q=2$, então:
+\begin{itemize}
+	\item Alfabeto: $\Bbb{F}_{2} = \{0,1\}$.
+	\item Exemplo de palavra: $x = (001)$.
+	\item Espaço de palavras: $\Bbb{F}_{2}^{3} = \{(000), (001), (010), (011), (100),$ $ (101), (110), (111)\}$.
+	\item Exemlo de código q-ário de $\Bbb{F}_{2}^{3}$: $C = \{(001), (110), (100)\}$.
+\end{itemize}
+
+\begin{block}{Definição}[\textit{Distância de Hamming}]
+Definimos como \textit{distância de Hamming} $d(x,y)$ entre duas palavras $x = (x_1 \ldots x_n)$ e $y = (y_1 \ldots y_n)$ de tamanho $n$, como o número de índices $i$ nos quais $x_i \neq y_i$, ou seja, o número de coordenadas nos quais $x$ e $y$ diferem.
+\end{block}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Definições Básicas da Teoria dos Códigos}
+{
+
+\begin{block}{Definição}[\textit{Esfera de Hamming}]
+Chamamos de \textit{esfera de Hamming} a esfera de centro na palavra $x$ e raio $R$ denotada por: 
+\begin{equation}
+\label{esfera}
+B(x,R)=\{y \in F_{q}^{n}:\,\,d(x,y)\leq R\}.
+\end{equation}
+\end{block}
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.30\textwidth]{images/boundingsphere.jpg}
+	\label{fig:bouding}
+	\caption{\textsl{Esfera de Hamming} de centro $x = (11)$, $R=1$ para $\Bbb{F}_{3}^{2}$.}
+\end{figure}
+
+}
+\end{frame}
+
+\subsection{Códigos de Cobertura e Códigos Curtos de Cobertura}
+
+\begin{frame}
+  \frametitle{O Problema Clássico dos Códigos de Cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> Seja $K_{q}(n,R)$ o número que denota a cardinalidade mínima de um código $C$ $q$-ário de tamanho $n$, de forma que para toda palavra $x$ do espaço, exista uma palavra $c$ em $C$ no qual $x$ e $c$ sejam diferentes em no máximo $R$ coordenadas.
+	\item<2-> O problema de derminar $K_{q}(n,R)$ para quaisquer $n$, $q$ e $R$ é problema clássico dos códigos de cobertura.
+	
+\begin{block}{Definição}[$K_{q}(n,R)$]
+{
+\scriptsize
+	Para $n\geq 2$ a $q\geq 2,$  $V_{q}^{n}\,$seja o conjunto de todas as palavras ($% 
+x_{1}x_{2}\ldots x_{n}$) com tamanho $n$ e componentes $x_{i}$
+do alfabeto de $q$ símbolos. Um subconjunto $C$ é uma $R$-\textit{cobertura} de $%
+V_{q}^{n}$ quando:
+\[
+\bigcup_{c\in C}B(c,R)=V_{q}^{n}.
+\]
+Então, o número $K_{q}(n,R)$ denota a menor cardinalidade de uma $R$-%
+{\it cobertura} de $V_{q}^{n}.$
+
+}
+\end{block}
 	
 \end{itemize}
-
 }
 \end{frame}
 
 
-%==================================================
-\section{Reactive Tabu Search on Short Coverings}
-
-\begin{frame}<1>
-  \frametitle{Reactive Tabu Search on Short Coverings}
-
-{%\footnotesize
-  \begin{itemize}
-  
-		\item Carnielli at al.(1995) and ï¿½stergard(1997) present the use metaheuristics to find upper bounds to $R-covering$ codes. 		\item We applied a reactive variation of Tabu Search(TS) for covering codes problems.
-		\item TS is an adaptive local search procedure that have been applied with sucess to a wide range of combinatorial optimization problems Glover(1989, 1990), including covering codes problems.
-		\item The Reactive Tabu Search is a variant of the TS, presented in Battitti and
-Tecchiolli(1994), that tries to overcome the problems found by the basic TS scheme. 
-
-  \end{itemize}
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{Reactive Tabu Search on Short Coverings}
-
-{ \footnotesize
-  \begin{itemize}
-  
-		\item The classical TS scheme keeps a list (tabu list) of fixed size and allows cycles larger than the list size.
- 		\item Even though this scheme may lead to excellent results, it is still present the possibility to
-have the search path trapped in a locally minimal region as described in Battiti and Tecchiolli(1994).
-		\item The reactive scheme tries to overcome this problem combining the main elements of a TS with a long term memory of the search that keeps a history of the visited solutions.
-		\item This memory is used to dynamically control the size of the tabu list augmenting its size when cycling becomes frequent and reducing it when a new region starts to be explored.
-		\item Another mechanism to scape from local minima is also used, it consists in successively applying a random perturbation to the current solution when the number of visited solution becomes over a given threshold.
-  \end{itemize}
-}
-\end{frame}
-
-\subsection{The Basic Tabu Search Scheme}
-
-\begin{frame}<1>
-  \frametitle{The Basic Tabu Search Scheme}
-
-{ %\footnotesize
-
-  \begin{itemize}
-  	\item We now present the basic TS scheme applied on this work.
-		\item The solution space that we consider is the set of all subsets of $V = V_k^n$, the vertex set of $G(n,k,R)$.
-		\item Not all elements of this space is a dominating set, i.e. is not a feasible solution to the original problem.  	
-  	\item The advantage is to have a natural neighborhood and the disadvantage is to require the use of a penalty mechanism to
-ensure to frequently hit dominating sets, i.e. feasible solutions.
-  \end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{The Basic Tabu Search Scheme}
-
-{ %\footnotesize
-
-  \begin{itemize}
-  	\item The neighborhood is given by adding a vertex not in the current solution set or removing one vertex from this set.
-		\item We applied a penalty to the objective function that is the result of the product of a penalty factor and the
-number of vertices not covered by the current solution.
-		\item Higher is the penalty factor, smaller are the chances not hitting a dominating set.
-		\item When this penalty factor is too high the search tends to behave as if only dominating set were allowed and the search will become too restrictive.
-		\item Adjusting this penalty factor is an important task in the tuning of this TS.
-  \end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{The Basic Tabu Search Scheme}
-
-{ \footnotesize
-
-  \begin{itemize}
-  	\item Our strategy to deal with this penalty factor (ALPHA) is to start with a small value (MIN\_ALPHA), increase in each iteration by a constant(STEP\_ALPHA), until it reaches a maximum value (MAX\_ALPHA), when its value is reset to the smaller one.
-		\item This allows the search to walk freely in the beginning of each such cycle and converge gradually to a feasible solution.
-		\item Another element in TS scheme is the tabu list, a list of forbidden moves that is constantly updated trying to avoid cycling on the search. That list has a restricted size named tabu tenure.
-		\item In our scheme, when a move is made it becomes tabu by tabu tenure iterations of the search. 
-		\item A solution can violate the tabu restriction when it improves the value of the best
-solution found until this point in the search. 
-  \end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{The Basic Tabu Search Scheme}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure The Basic Tabu Scheme}
-
-\begin{step} {\bf Initializations.}
+\begin{frame}
+  \frametitle{O Problema dos Códigos Curtos de Cobertura}
+{
+	
 \begin{itemize}
-    \item[-] Construct an initial Cover $U$ by adding random selected words, not in $U$, until $U$ is a Cover.
+	\item<1-> Seja $\Bbb{F}_{q}$ um corpo finito de $q$ elementos. Dado inteiros $n\geq 2$ e $0 \leq R \leq n$, $c_{q}(n,R)$ é definido como a menor cardinalidade de um subconjunto $H$ de $\Bbb{F}_{q}^{n}$ de forma que para toda palavra $x$ neste espaço, $x$ seja diferente em no máximo $R$ coordenadas de um vetor múltiplo escalar de $H$.
+	\item<2-> O problema de determinar $c_{q}(n,R)$ para $q$, $n$ e $R$ arbitrários é chamado problema de códigos curtos de cobertura.
+\end{itemize}	 
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{O Problema dos Códigos Curtos de Cobertura}
+{
+	
+\begin{block}{Definição}[$R$-\textit{cobertura curta}]
+\scriptsize
+	Um subconjunto $H$ no espaço de vetores $\Bbb F_{q}^{n}$ é uma $R$-\textit{cobertura curta\ de }$
+\Bbb F_{q}^{n}$ quando $ \Bbb F_{q}.H=\{\alpha h,\alpha \in \Bbb F_{q} \mbox{ and } h\in H\}$ é uma $R$%
+-cobertura de $\Bbb F_{q}^{n}$.
+\end{block}
+\pause
+
+\begin{itemize}
+	\item É importante notar que $H$ é uma cobertura curta se o conjunto que contém $H$ e todos seus múltiplos escalares gera uma cobertura de $\Bbb F_{q}^{n}$.
+\end{itemize}
+
+\begin{block}{Definição}[$c_{q}(n,R)$]
+\scriptsize
+O problema induzido $c_{q}(n,R)$ é definido como a menor cardinalidade deste subconjunto $H$, isto é:
+\[
+c_{q}(n,R)=\min \{\ \left| H\right| :H \mbox{ é uma } R
+\mbox{-cobertura curta de } \Bbb F_{q}^{n}\mathit{\ }\}.
+\]\end{block}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Importância do Estudo dos Códigos Curtos de Cobertura}
+{
+	
+Algumas das motivações para o estudo de coberturas curtas de códigos são listadas abaixo:
+
+\begin{itemize}
+
+\item<1-> Do ponto de vista teórico, coberturas curtas parecem ser uma estrutura mais rica algebricamente do que as coberturas clásicas, já que as coberturas curtas são invariantes sobre a multiplicação escalar. 
+\item<2-> Do ponto de vista prático, coberturas curtas nos dão uma maneira de armazenar códigos utilizando menos memória que no caso da cobertura clássica.
+\item<3-> Resultados obtidos para as coberturas curtas podem levar a resultados recordes para o problema clássico de cobertura de códigos.
+
+\end{itemize}
+
+}
+\end{frame}
+
+\subsection{Códigos de Cobertura e Conjuntos Dominantes em Grafos}
+
+\begin{frame}
+  \frametitle{Conjuntos Dominantes em Grafos}
+{
+
+
+\begin{block}{Definição}[Conjunto Dominante]
+\scriptsize
+Seja $G=(V,E)$ um grafo direcionado com um conjunto de vértices $V$ e uma coleção $E$ de pares ordenados em $V\times V$. Como usual, $u$ é adjacente a $v$ (ou $v$ é vizinho de $u$) quando $(u,v) \in E$. O subconjunto de vértices $U \subseteq V$
+é chamado de {\it conjunto dominante} de $G$ se, para todo $v$ em $V$, ou $v$ está em $U$ ou existe um vértice $u$ em $U$ de forma que $u$ é adjacente a $v$ ({\em i.e.}, $(u,v) \in E$).
+\end{block}
+\pause
+
+\begin{itemize}
+\item<1-> O problema de encontrar o conjunto dominante de $G$ de menor cardinalidade é um problema clássico da teoria dos grafos.
+\item<2-> Os problemas de códigos de cobertura apresentados correspondem a uma classe de conjuntos dominantes em grafos.
+\end{itemize}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Códigos de Cobertura e Conjuntos Dominantes em Grafos}
+{
+
+\begin{itemize}
+
+\item<1-> Dado o espaço de vetores $\Bbb{F}_q^n$ e $0 \leq R \leq n$, construímos um grafo $G(n,q,R)=(V,E)$.
+\item<2-> Para cada vetor $u$ em $\Bbb{F}_q^n$ associamos um vértice $u$ em $V$.
+\item<3-> A aresta $e=(u,v)$ está em $E$ se e somente se $u$ cobre $v$, ou seja, se $d(u,v) \leq R$ para os códigos clássicos ou $\alpha \in \Bbb{F}_q$ de forma que $0 <d(\alpha u,v) \leq R$ para os códigos curtos.
+\item<4-> Tanto o problema clássico de códigos de cobertura quanto sua versão curta podem ser transformados no problema de encontrar o menor conjunto dominante no grafo construído da forma descrita.
+
+\end{itemize}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Códigos de Cobertura e Conjuntos Dominantes em Grafos}
+{
+
+\begin{figure}
+	\centering
+		\includegraphics[width=7cm]{images/s3.jpg}
+	\label{fig:solucao}
+	\caption{\footnotesize Conjunto dominante para o grafo do $K_{2}(3,1)$.}
+\end{figure}
+
+\begin{figure}
+	\centering
+		\includegraphics[width=7cm]{images/s2.jpg}
+	\label{fig:solucaoinviavel}
+	\caption{\footnotesize Solução inviável para $K_{2}(3,1)$.}
+\end{figure}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Códigos de Cobertura e Conjuntos Dominantes em Grafos}
+{
+
+
+\begin{figure}
+	\centering
+		\includegraphics[width=7cm]{images/s1.jpg}
+	\label{fig:solucaootima}
+	\caption{\footnotesize Solução ótima para $K_{2}(3,1)$.}
+\end{figure}
+
+}
+\end{frame}
+
+\subsection{Trabalhos Relacionados}
+
+\begin{frame}
+  \frametitle{Trabalhos Relacionados}
+{
+	
+\begin{itemize}
+	\item<1-> Os primeiros trabalhos que usaram heurísticas de busca local para determinar limites para os códigos clássicos de cobertura utlizavam quase que exclusivamente a metaeurística \textsl{Simulated Annealing}.
+		\begin{enumerate}
+			\item Wille 1987 - $K_{3}(6,1) \leq 74$.
+			\item Van Laarhoven et al. 1989- $K_{3}(6,1) \leq 73$ e $K_{3}(7,1) \leq
+		186$.
+		\end{enumerate}
+	\item<2-> \"Osterg\aa rd 1991, Wille 1990, Aarts et. al 1992 e Van Lint 1989
+	obtiveram inúmeros outros recordes com o simulated annealing.
+	\item<3-> O primeiro trabalho utilizando a busca tabu para obter limites para os códigos de cobertura foi o trabalho de \"Osterg\aa rd 1997.
+	\item<4-> Neste trabalho ele mostrou que o tempo para obtenção de determinados limites poderia ser melhorado pelo uso da busca tabu.
+	\item<5-> W.A. Carnielli et. al 1998 também apresentaram uma aplicação da busca
+	tabu para o problema dos códigos de cobertura.
+	\item<6-> A principal diferença entre os trabalhos usando busca tabu foi o
+	espaço de busca utilizado.
+\end{itemize}
+}
+
+\end{frame}
+
+\section{Busca Tabu Reativa}
+
+\begin{frame}
+  \frametitle{Busca Tabu Reativa aplicada a códigos de cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> Carnielli et al. e \"Osterg\aa rd usam metaeurísticas para encontrar limites superiores para $R$-coberturas clássicas. Nenhum dos trabalhos utilizam a variação reativa da busca tabu.
+	\item<2-> A busca tabu é um procedimento adaptativo, onde seu principal objetivo é evitar ciclagem entre soluções e intensificar a busca em regiões promissoras do espaço.
+	\item<3-> Na busca tabu o movimento entre soluções vizinhas é quase sempre um passo guloso, entretanto só se é permitido mudar da solução atual para a vizinha se o movimento necessário para isto não esteja classificado como ``tabu''.
+	\item<4-> O esquema clássico da busca tabu mantém uma lista de movimentos classificados como tabu (lista tabu).
+	\item<5-> O uso do mecanismo de reação tenta evitar que a busca fique presa a regiões de mínimos locais do espaço, caracterizando a busca tabu reativa.
+	
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Busca Tabu Reativa aplicada a códigos de cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> A busca tabu reativa proprõe combinar os principais elementos da busca tabu clássica com uma memória de longa duração que mantém a história das soluções visitadas durante a busca. 
+	\item<2-> Esta memória é utilizada para controlar dinamicamente o tamanho da lista tabu, aumentando este tamanho quando a ocorrência de ciclos se torna frequente e o diminuindo quando uma nova região do espaço começa a ser explorada.
+	\item<3-> Mecanismo de escape de mínimos locais via perturbarções aleatórias.
+	\item<4-> A busca tabu reativa tem apresentado sucesso em diversas aplicações.
+	
+\end{itemize}
+}
+\end{frame}
+
+\subsection{O Esquema Básico da Busca Tabu}
+
+\begin{frame}
+  \frametitle{O Esquema Básico da Busca Tabu}
+{
+	
+\begin{itemize}
+	\item<1-> Espaço de busca: o conjunto de todos $2^{(q^n)}$ suconjuntos de $\Bbb{F}_q^n$ (o conjunto de vértices de $G(n,q,R)$).
+	\item<2-> Vizinhança: adição de um vértice que não esteja no conjunto de vértices da solução atual ou a remoção de um vértice deste.
+	\item<3-> Função Objetivo: tamanho do conjunto somado com um fator de penalidade.
+	\item<4-> Lista Tabu: armazena a última iteração onde um movimento (adição ou remoção de um vértice) foi tornado tabu.
+	\item<5-> Critério de aspiração: revoga a restrição tabu de um movimento quando o mesmo leva a uma solução cujo valor de função objetivo da mesma é o melhor já encontrado durante a busca.
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{O Esquema Básico da Busca Tabu}
+{
+{\bf Inicializações.}
+\begin{itemize}
+    \item[-] Construir uma cobertura inicial $U$ adicionando aleatoriamente palavras, que não estão em $U$, até que $U$ se torne uma cobertura.
     \item[-] $BestCode \leftarrow U$.
-    \item[-] $T[M] \leftarrow -\infty$, for every possible move $M$.
+    \item[-] $T[M] \leftarrow 0$, para todo movimento possível $M$.
     \item[-] $alpha \leftarrow MIN\_ALPHA$.
-    \item[-] Initialize Reaction Mechanism.
-\end{itemize}
-\end{step}
-
-\end{block}
-
+    \item[-] Inicializa o mecanismo de reação.
+\end{itemize}	
 }
-
 \end{frame}
 
 
-\begin{frame}<1>
-  \frametitle{The Basic Tabu Search Scheme}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure The Basic Tabu Scheme}
-
-\begin{step} {\bf Main Loop.} Repeat {\sc Number-of-Iterations} times.
+\begin{frame}
+  \frametitle{O Esquema Básico da Busca Tabu}
+{
+{\bf Loop Principal.} Repita {\sc Number-of-Iterations} vezes.
 \begin{itemize}
-    \item[-] Update Penalty Factor ($alpha$)
-    \item[-] Select the best move $M$ that is not tabu or satisfies the aspiration criteria
-    \item[-] Make a Move $M$ in U
-    \item[-] Set a tabuValue of $M$ in $T$ to $T[M]  \leftarrow present-iteration$
-    \item[-] \textbf{If} $U$ is a cover and $cardinality-of-U < cardinality-of-BestCode$
+    \item[-] Atualiza o Fator de Penalidade ($alpha$).
+    \item[-] Seleciona o melhor movimento $M$ que não é tabu ou satisfaça o critério de aspiração.
+    \item[-] Realizar o movimento $M$ em $U$.
+    \item[-] Setar o valor tabu de $M$ em $T$, $T[M]  \leftarrow iteracao-atual$.
+    \item[-] \textbf{Se} $U$ é uma cobertura e $|U| < |BestCode|$
         \begin{itemize}
-        \item[-] $BestCode \leftarrow U$
+        \item[-] $BestCode \leftarrow U$.
         \end{itemize}
-    \item[-] Call Reaction Mechanism
+    \item[-] {\bf Chama o mecanismo de reação}.
 \end{itemize}
-\end{step}
-
-\end{block}
-
-}
-
-\end{frame}
-
-\subsection{The Reaction Mechanism}
-
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ \footnotesize
-
-  \begin{itemize}
-  	\item The reaction mechanism mantains a long term memory that keeps track of the solutions visited, the iteration when they were last visited and how many times they become a current solution.
-  	\item Each time a solution repeats in the search the interval between visits is calculated.
-  	\item A {\em quick reaction} occurs when this interval is smaller than a given threshold, and the tabu tenure is set to a large value.
-  	\item A {\em slow reaction} follows gradually reducing the tabu tenure value, since it is expected that a new search region is attained by the search when it keeps a large tabu tenure value.
-  \end{itemize}
-
 }
 \end{frame}
 
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
+\subsection{O Mecanismo de Reação}
 
-{ 
-
-  \begin{itemize}
-  	\item An another local minima scape mechanism keeps track of solutions that are visited an excessive number of times.
-  	
-  	\item When this number of solutions goes beyond a threshold, a number of random moves is done on the current solution, most likely going into a region not yet explored.
-
-  	\item The combination of these two mechanisms turns the reactive TS an important improvement on the classical TS implementations, improving its results on a numbers of applications of TS.
-
-  \end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ 
-
-  \begin{itemize}
-  	
-  	\item The reaction mechanism uses some data structures and variables described below:
-  		\begin{itemize}
-  			\item $Visited$: set that keeps information on the solutions visited during the search.
-  			\item $OftenRepeated$: set which stores the solutions excessively visited.
-  			\item $chaotic$: cardinality of $OftenRepeated$.
-  			\item $contLastSizeChange$: variable  that keeps the number of iteration since last tabu tenure change.
-  			\item $movingAvg$: variable storing the average size of the cycles completed in the search.
-  		\end{itemize}
-
-  	
-  \end{itemize}
-
-}
-\end{frame}
-
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure Reaction Mechanism}
-
-\begin{step} 
-
+\begin{frame}
+  \frametitle{Controle dinâmico do tabu tenure e Mecanismo de Escape}
+{
+	
 \begin{itemize}
-    \item[-] Create empty sets $Visited$ and $OftenReapeated$.
-    \item[-] $Chaotic \leftarrow 0$.
-    \item[-] $contLastSizeChange \leftarrow 0$.
+	\item<1-> Memória de longo prazo que mantém o conjunto das soluções visitadas, a iteração da última visita e o número de visitas às mesmas.
+	\item<2-> Cada vez que uma solução se repete na busca o intervalo entre as visitas é calculado.
+	\item<3-> A chamada reação rápida ocorre quando este intervalo é menor que um dado ``treshold'' (aumentar tabu tenure).
+	\item<4-> A chamada reação lenta segue gradualmente reduzindo o valor do tabu tenure. 
+	\item<5-> O mecanismo de escape trabalha monitorando as soluções que são visitadas um número excessivo de vezes. Quando o número destas soluções excede um determinado ``treshold'', um determinado número de movimentos aleatórios é realizado na solução atual.
+	
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{O algoritmo do Mecanismo de Reação}
+{
+	
+{\bf Inicialização do Mecanismo de Reação}
+\begin{itemize}
+    \item[-] Cria os conjuntos vazios $Visited$ e $OftenReapeated$.
+    \item[-] $chaotic \leftarrow 0$.
+    \item[-] $countLastSizeChange \leftarrow 0$.
     \item[-] $movingAvg\leftarrow 0$.
     \item[-] $tabuTenure \leftarrow MIN\_TENURE$.
 \end{itemize}
-
-\end{step}
-
-\end{block}
-
 }
-
 \end{frame}
 
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure Reaction Mechanism}
-
-\begin{step} 
+\begin{frame}
+  \frametitle{O algoritmo do Mecanismo de Reação}
+{
+{\bf Mecanismo de Reação}
 
 \begin{itemize}
-\item[-] $escape \leftarrow false$.
-\item[-] $contLastSizeChange++$.
-\item[-] \textbf{If} $U$ is in $Visited$.
-    \begin{itemize} \item Call fast reaction. \end{itemize}
-\item[-] \textbf{else}
-    \begin{itemize} \item Call slow reaction. \end{itemize}
-\item[-] \textbf{If} $escape$ is $true$.
+\item[-] $escape \leftarrow true$. \item[-]
+$countLastSizeChange++$. \item[-] \textbf{Se} $U$ está em $Visited$.
     \begin{itemize}
-    \item[-] Clear the $Visited$ set.
-    \item[-] $chaotic \leftarrow 0$.
-    \item[-] Make a random number of moves in $U$.
-    \end{itemize}
-\end{itemize}
-
-\end{step}
-
-\end{block}
-}
-
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure Fast Reaction}
-
-\begin{step} 
-
-\begin{itemize}
-    \item[-] $TamCycle \leftarrow$ present iteration - last visit iteration of $U$.
-    \item[-] Increment the number of visits of $U$ and update the iteration of last visit to $U$.
-    \item[-] \textbf{If} $TamCycle < CYCLE\_MIN$.
+    \item[-] $TamCycle \leftarrow$ iteração atual - iteração da última visita de $U$.
+    \item[-] Incrementa o número de visitas a $U$ e atualiza a iteração da última visita a $U$.
+    \item[-] \textbf{Se} $TamCycle < CYCLE\_MIN$.
         \begin{itemize}
         \item[-] $movingAvg \leftarrow 0.9 * movingAvg + 0.1 * TamCycle$.
         \item[-] $tabuTenure \leftarrow min(tabuTenure * INCREASE, MAX\_TENURE)$.
-        \item[-] $contLastSizeChange \leftarrow 0$.
+        \item[-] $countLastSizeChange \leftarrow 0$.
         \end{itemize}
-    \item[-] \textbf{If} number of visits to $U > MAX\_VISITS$ and $U$ is not in $OftenRepeated$
+    \item[-] \textbf{Se} número de visitas a $U > MAX\_VISITS$ e $U$ não está em $OftenRepeated$
         \begin{itemize}
-        \item[-] Insert $U$ in $OftenRepeated$ and increment $chaotic$.
-        \item[-] \textbf{If} $chaotic > CHAOS$.
-            \begin{itemize}
-            \item[-] $escape \leftarrow true$.
-            \end{itemize}
-        \end{itemize}
-\end{itemize}
-
-\end{step}
-
-\end{block}
-}
-
-\end{frame}
-
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
-
-{ \footnotesize
-
-\begin{block}
-
-\underline{\bf Procedure Slow Reaction}
-
-\begin{step} 
-
-\begin{itemize}
-    \item[-] Insert $U$ in $Visited$ and set the number of visits to $U$ to one and the last iteration of a visit to $U$ to the present iteration.
-    \item[-] \textbf{If} $contLastSizeChange > movingAvg$.
-        \begin{itemize}
-        \item[-] $tabuTenure \leftarrow max(tabuTenure * DECREASE, MIN\_TENURE)$.
-        \item[-] $contLastSizeChange \leftarrow 0$.
+        \item[-] Insere $U$ em $OftenRepeated$ e incrementa $chaotic$.
+        \item[-] \textbf{Se} $chaotic > Chaos$: $escape \leftarrow true$.
         \end{itemize}
     \end{itemize}
-\end{step}
+\end{itemize}
 
-\end{block}
+}
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{O algoritmo do Mecanismo de Reação}
+{
+{\bf Mecanismo de Reação}
+
+\begin{itemize}
+\item[-] \textbf{Senão}
+    \begin{itemize}
+    \item[-] Insere $U$ em $Visited$ e seta o número de visitas a $U$ para um e a última iteração de visita a $U$ para a iteração atual.
+    \item[-] \textbf{Se} $countLastSizeChange > movingAvg$.
+        \begin{itemize}
+        \item[-] $tabuTenure \leftarrow max(tabuTenure * DECREASE, MIN\_TENURE)$.
+        \item[-] $countLastSizeChange \leftarrow 0$.
+        \end{itemize}
+    \end{itemize}
+\item[-] \textbf{Se} $escape$ é $true$.
+    \begin{itemize}
+    \item[-] Esvazia o conjunto $Visited$.
+    \item[-] $chaotic \leftarrow 0$.
+    \item[-] Realiza um determinado número de movimentos aleatórios em $U$.
+    \end{itemize}
+\end{itemize}
 }
 
 \end{frame}
 
-\begin{frame}<1>
-  \frametitle{The Reaction Mechanism}
 
-{ 
-	\footnotesize
-  \begin{itemize}
-  	\item It is clear that implementing this reaction mechanism in a strict way would possibly demand an excessive large amount of memory and/or a very smart data structure regarding compression and access time.
+\section{HMGC}
 
-  	
-  	\item Instead of keeping the real set of solution, we used a hash table that uses the hash function on the string constructed by the concatenation of the number of vertices covered by exactly by $i$  vertices of the current solution for $i$ in the range from $1$ to $6$.
-  	
-  	\item Although this has shown to reasonably differ the solutions in our tests, it certainly generates a number of false positive tests.
-  	
-  	\item But since this a heuristic search, the worst harm would be a bad heuristic behaviour which was not the case, and should seldom be.
-  	
-  \end{itemize}
-
-}
-\end{frame}
-
-\section{Results and Conclusions}
-
-\begin{frame}<1>
-  \frametitle{Results and Conclusions}
-
-{ 
-	\footnotesize
-  \begin{itemize}
-  	\item The reactive TS algorithm was implemented in C++ programming language and the experiments were executed on a Pentium 4 with 3.2 GHz.
-  	
-  	\item We ran the algorithm with and without the reaction mechanism. Those without used a fixed tabu tenure.
-  	
-  	\item The set of instances for 7 different values of the pair $n$ and $R$, keeping the size of the
-alphabet on $3$.
-
-  	\item The runs with the fixed tabu tenure used values 10, 20 and 30, running for this algorithm 10 independent tries for each instance.
-  	
-  	\item The reactive tabu search used parameters determined in an empirical way after a series of preliminaries experiments.
-
-		\item Also, 10 independent tries were made for each instance, using always the same chosen parameter configuration.
-  
-  \end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{Results and Conclusions}
-
-{ 
-	\footnotesize
-  \begin{block}
-  
-\underline{\bf Legend}
-  \begin{itemize}
-  	\item $LB$: lower bounds from section theorical bounds on short coverings.
-  	\item $UB$: upper bounds from section theorical bounds on short coverings.
-  	\item \textbf{NI}: indicates the number of iterations of the algorithm.
-  	\item \textbf{TS}: identifies the Basic Tabu Search results.
-  	\item \textbf{RTS}: identifies the Reactive Tabu Search results. 
-  	\item $AUB$: stands for the upper bounds found by the algorithms.
-  	\item AT(s): labels the average algorithm running time in seconds.
-
-  \end{itemize}
-  \end{block}
-
-}
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{Results and Conclusions}
-
-\[
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{6}{|c|}{} & \multicolumn{2}{|c|}{\textbf{TS} } & \multicolumn{2}{|c|}{\textbf{RTS}} \\ \hline
-$n$ & $q$ & $R$ & $LB$  & $UB$ & \textbf{NI} & $AUB$ & AT(s) & $AUB$ & AT(s) \\  \hline
-5 & 3 & 1 &  13  & 40 & 2000 & 13 & 0.064 & 13 & 0.065 \\ \hline
-5 & 3 & 2 & 4 & 13 & 1000 & 4 & 0.148 & 4 & 0.150 \\  \hline
-6 & 3 & 1 & 32  & 121 & 100000 & 39 & 11.036 & 37 & 11.103 \\ \hline
-6 & 3 & 2 & 7  & 40 & 50000 & 8 & 25.654 & 8 & 31.05 \\  \hline
-7 & 3 & 1 & 78 & 364 & 200000 & 107 & 94.233 & 105 & 127.94 \\  \hline
-7 & 3 & 2  & 13 & 121 & 100000 & 19 & 227.80 & 17 & 267.71 \\ \hline
-7 & 3 & 3 & 5 & 40 & 1000 & 7 & 66.02 & 6 & 72.38 \\ \hline
-\end{tabular}
-\]
-\end{frame}
-
-
-\begin{frame}<1>
-  \frametitle{Results and Conclusions}
-
-{ 
+\begin{frame}
+  \frametitle{Heurística de Melhoria via Geração de Colunas (HMGC)}
+{
 	
-  \begin{itemize}
-  	\item The first two instances were use to test the correctness and minimum quality of the proposed approach, and they found the optimal solution and proved their optimality.
-  	
-  	\item On the remaining instances, there were only one case where the reactive and the classical TS found the same
-value, probably because that both are optimal, and these solutions are easy to find.
-  	
-  	\item The other 4 seem to be demanding instances. On all of them the reactive approach performed better.
+\begin{itemize}
+	\item<1-> A HMGC se baseia na geração atrasada de colunas e em heurísticas de busca local.
+	\item<2-> A principal característica da HMGC é sua estratégia de escape de mínimos locais, ela é baseada em uma transformação do espaço de busca a partir do problema de pricing da geração de colunas.
+	\item<3-> A idéia da estratégia consiste aplicar a transformação do espaço de busca e então reiniciar a busca neste novo espaço, na esperança de que nele a busca não esteja em um mínimo local e ao explorar o mesmo seja possível atingir soluções de melhor qualidade.
+	
+\end{itemize}
+}
+\end{frame}
 
-  \end{itemize}
+
+\subsection{Transformação do Espaço de Busca}
+
+\begin{frame}
+  \frametitle{Transformação do Espaço de Busca}
+{
+	
+\begin{itemize}
+	\item<1-> Quando as colunas da formulação da geração de colunas são soluções viáveis do problema e o problema de pricing é o próprio problema original, porém com custos diferentes dependentes dos valores das variáveis duais, podemos considerar o espaço de busca do problema de pricing como uma transformação do espaço de busca do problema original.
+	\item<2-> A transformação utilizada na HMGC é justamente esta, utiliza-se uma formulação do problema onde as colunas sejam soluções viáveis e o problema de pricing associado seja o próprio problema original, tendo apenas custos diferentes.
+	\item<3-> Um detalhe importante a ser notado na transformação do espaço de busca é que podemos aplicar esta transformação sucessivas vezes.
+	\item<4-> A transformação será ilustrada mais a frente para os problemas de códigos de cobertura.
+	
+\end{itemize}
+}
+\end{frame}
+
+\subsection{Algoritmos para HMGC}
+
+\begin{frame}
+  \frametitle{Algoritmos para HMGC}
+{
+	
+\begin{itemize}
+	\item<1-> Existem inúmeras formas de se combinar a busca local com a transformação do espaço de busca apresentada, de forma a tentar fugir de mínimos locais.
+	\item<2-> A HMGC é justamente esta combinação, ela não fixa a utilização da busca local nem da transformação do espaço de busca.
+	\item<3-> O trabalho exemplifica duas formas de se utilizar a HMGC, apresentando um algoritmo populacional e um baseado em transformações sucessivas do espaço de busca.
+	\item<4-> Detalhamos a seguir o algoritmo da HMGC que utiliza as sucessivas transformações do espaço de busca, já que o mesmo foi utilizado na HMGC aplicada aos códigos de cobertura.
+	
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Algoritmo de Sucessivas Trasnformações para a HMGC}
+{	
+{\bf Inicializações.}
+\begin{itemize}
+    \item[-] Construir uma solução inicial $Ini$.
+    \item[-] Aplicar busca local em $Ini$ coletando durante a busca um conjunto de soluções (colunas) $Col$ que obedeçam ao critério de seleção.
+    \item[-] Atribuir para $s$ o resultado da busca local.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algoritmo de Sucessivas Trasnformações para a HMGC}
+{	
+{\bf Loop Principal.} 
+\begin{itemize}
+    \item[-] Aplicar transformação no espaço de busca atual utilizando as colunas em $Col$.
+    \item[-] Aplicar busca local em $s$ no novo espaço de busca coletando durante a busca o conjunto de soluções (colunas) $Col$ que obedeçam ao critério de seleção.
+    \item[-] Se durante a busca for encontrada uma solução melhor que $s$ (com relação a função objetivo do espaço original), então atualizar $s$ para esta solução.
+    \item[-] \textbf{Se} critério de parada satisfeito
+        \begin{itemize}
+        \item[-] Retornar $s$.
+    		\end{itemize}
+\end{itemize}
+}
+\end{frame}
+
+\subsection{HMGC aplicada a Problemas de Códigos de Cobertura}
+
+\begin{frame}
+  \frametitle{HMGC aplicada a Problemas de Códigos de Cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> A HMGC proposta utiliza como busca local a busca tabu reativa apresentada.
+	\item<2-> A HMGC também usa o algoritmo de sucessivas transformações do espaço de busca apresentado anteriormente.
+	\item<3-> Definimos a seguir a modelagem utilizada para geração de colunas e o critério de seleção de colunas durante a aplicação das buscas locais.
+	
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Modelagem para Geração de Colunas}
+{
+	
+\begin{equation}
+  \textrm{min} \sum_{p \in P} c(p) \lambda_p
+\end{equation}
+
+sujeito a
+
+\begin{eqnarray} 
+	\sum_{p \in P} \lambda_p = 1 \label{eq:r1domset}\\
+	\sum_{p \in P} q_{i}^{p} \lambda_p - x_{i} = 0, i = 1, ..., n \label{eq:r2domset}\\
+	\lambda_p \geq 0, p \in P \label{eq:r3domset} \\
+	x_{i} \geq 0, i = 1, ..., n
+\end{eqnarray}
+
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{O Problema de Pricing}
+{
+	
+\begin{itemize}
+	\item O custo reduzido de uma coluna $\lambda_p$ é dado pelo custo do conjunto dominante $p$ subraído do somatório do valor das variáveis duais associadas a cada restrição do tipo \ref{eq:r2domset} em que $p$ tem coeficiente não-nulo, o que corresponde as restrições sobre os vértices $i$ que fazem parte de $p$.
+	\item Podemos então decompor o custo reduzido de $p$ por cada vértice que faz parte do mesmo.
+\end{itemize}
+	
+\begin{equation}
+\label{redcostdomset}
+	c'(p) = \sum_{i \in p} cv'(i)
+\end{equation}   
+\begin{equation}
+\label{vertexcost}
+	cv'(i) = 1 - d(i)
+\end{equation}
+	
+
+\begin{itemize}
+	\item Assim o problema de pricing corresponde a encontrar o conjunto dominante $p$ em $G$ com menor somatório de custos por vértice $i$ de $p$, sendo o custo por vértice $i$ igual a $cv'(i)$.
+\end{itemize}
+
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Evitando o Uso de Resolvedores Lineares}
+{
+	
+\begin{itemize}
+	\item<1-> Analisando a transformação do espaço de busca da HMGC percebemos a necessidade de obtenção de valores ótimos para as variáveis duais de forma a se criar o problema de pricing.
+	\item<2-> A obtenção destes valores pode ser feita pela resolução do problema primal de geração de colunas utilizando resolvedores de programas lineares.
+	\item<3-> Uma maneira de tentar evitar o uso dos resolvedores é analisar diretamente o problema dual ao problema primal da geração de colunas e tentar desenvolver um algoritmo para resolver diretamente este problema, de forma a obter os valores ótimos das variáveis duais.
+	
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Evitando o Uso de Resolvedores Lineares}
+{
+	
+\begin{equation}
+  \textrm{max} L
+\end{equation}
+
+sujeito a
+
+\begin{eqnarray} 
+	\sum_{i \in p} d(i) + L \leq c(p) \label{eq:slack}, p \in P\\
+	d(i) \geq 0, i = 1, ..., n
+\end{eqnarray}
+
+\begin{itemize}
+	\item No trabalho apresentamos um algoritmo trivial para atribuição de valores ótimos às variáveis duais.
+\end{itemize}
 
 }
 \end{frame}
 
 
-\begin{frame}<1>
-  \frametitle{Results and Conclusions}
+\begin{frame}
+  \frametitle{Critério de Seleção de Colunas}
+{
+	
+\begin{itemize}
+	\item A cada iteração da busca tabu reativa se verifica se a solução atual $s$ é viável, ou seja, se é um conjunto dominante. Caso $s$ seja viável é calculado o grau de similaridade de $s$ com relação as soluções $p$ pertencentes a $Col$.
+	
+\end{itemize}
 
-{ 
-	\footnotesize
-  \begin{itemize}
-  	\item This is a new problem and it is difficult to tell how hard they are to repeat, this will be left for future research of other researchers in the area.
-  	
-  	\item We are convinced that our approach is a strong one. The reason for this statement comes from the more classical problem of finding $R-covering$ codes instead of $R-short-covering$ codes.
-  	
-  	\item The reactive TS proposed here was also applied on $R-covering$, obtaining execellent results.
-  	
-  	\item The reactive TS was able to repeatedly find the best known solution, including the 73 value for the $K_{3}(6,1)$ and the 186 value for the $K_{3}(7,1)$.
-  
-  \end{itemize}
+\begin{equation}
+\label{eq:similaridade}
+	G(s) = \frac{|E|}{|S \cup P|}
+\end{equation}
+
+\begin{itemize}
+	\item Se existir algum $p \in Col$ para qual o grau de similaridade $G(s,p)$ seja maior que um determinado treshold $t$, então $s$ não é inserido em $Col$, caso contrário $s$ é incluído em $Col$.
+	\item A idéia é tentar manter em $Col$ soluções representativas das regiões do espaço explorado pela busca, evitando o armazenamento de soluções similares.
+\end{itemize}	
+	
+}
+\end{frame}
+
+
+\section{Experimentos e Resultados}
+
+\begin{frame}
+  \frametitle{Experimentos e Resultados}
+{
+	
+\begin{itemize}
+	\item<1-> Os experimentos foram dividos em duas partes: 
+\begin{enumerate}
+	\item<2-> Obtenção de limites iniciais para os códigos curtos de cobertura pela busca tabu reativa.
+	\item<2-> Validação da HMGC e comparação entre as heurísticas apresentadas. 
+\end{enumerate}
+
+	\item<3-> Os algoritmos foram implementados utilizando a linguagem de programação C++ e os experimentos foram realizados em um computador com processador Intel(R) Core(TM)2 Duo 2.2 GHz e 3GB de memória DDR2. 
+	
+\end{itemize}
+}
+\end{frame}
+
+\subsection{Limites Iniciais para Coberturas Curtas via Busca Tabu Reativa}
+
+\begin{frame}
+  \frametitle{Limites Iniciais para Coberturas Curtas via Busca Tabu Reativa}
+{
+	
+\begin{itemize}
+	\item<1-> Foram realizados experimentos tanto para o problema de códigos curtos de cobertura quanto para o problema clássico de códigos de cobertura.
+	\item<2-> Os experimentos no problema clássico tiveram como objetivo demonstrar a eficácia da busca tabu reativa através da comparação com os melhores resultados da literatura.
+	\item<3-> Os parâmetros do algoritmo foram determinados empiricamente. Eles foram ajustados para cada problema e tamanho de instância.
+	\item<4-> Os parâmetros principais são {\bf Max\_Visits}, {\bf Chaos}, {\bf Cycle\_Min}, {\bf Min\_Tenure}, {\bf Max\_Tenure}, {\bf Increase} e {\bf Decrease}.
+	\item<5-> O algoritmo implementado se inicia com uma solução inicial gerada através de duas estratégias distintas: uma geração aleatória e outra gulosa.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resultados para $K_{q}(n,R)$}
+{
+\scriptsize
+\begin{table}[h]
+\label{codeResult}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline n & q & R & NI & TF(s) & TT(s) & RTS & BestKnown \\ \hline
+5 & 3 & 1 & 5000 & 0.008 & 0.148 & 27 & 27 \\ \hline 5 & 3 & 2 &
+5000 & 0.156 & 0.201 & 8 & 8 \\ \hline 6 & 3 & 1 & 10000 & 0.127 &
+0.576
+& 73 & 73 \\ \hline 6 & 3 & 2 & 10000 & 0.284 & 1.260 & 17 & 17 \\
+\hline 6 & 3 & 3 & 10000 & 0.006 & 3.380 & 6 & 6 \\ \hline 7 & 3 &
+1 & 100000 & 4.496 & 9.400 & 186 & 186 \\ \hline 7 & 3 & 2 &
+100000 & 20.141 & 33.694 & 34 & 34 \\ \hline 7 & 3 & 3 & 100000 &
+11.696 & 94.737 & 12 & 12 \\ \hline 5 & 4 & 1 & 10000 & 0.168 &
+0.880 & 64 & 64 \\ \hline 5 & 4 & 2 & 10000 & 2.024 & 3.068 & 16 &
+16 \\ \hline 5 & 4 & 3 & 10000 & 0.016 & 6.788 & 4 & 4 \\ \hline 6
+& 4 & 1 & 100000 & 2.928 & 15.365 & 256 & 256 \\ \hline 6 & 4 & 2
+& 100000 & 82.371 & 90.709 & 63 & 52 \\ \hline 6 & 4 & 3 & 100000
+& 72.996 & 147.849 & 16 & 14 \\ \hline
+\end{tabular}
+\end{center}
+\caption{Resultados para $K_{q}(n,R)$, obtidos pela busca tabu reativa}
+\end{table}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Resultados para $c_{q}(n,R)$}
+{
+\scriptsize
+
+\begin{table}[h]
+\label{shortresult}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+n & q & R & NI & TF(s) & TT(s) & UB \\ \hline
+5 & 3 & 1 & 5000 & 0.004 & 0.192 & 13 \\ \hline
+6 & 3 & 1 & 100000 & 9.788 & 10.100 & 37  \\ \hline
+6 & 3 & 2 & 100000 & 0.036 & 25.593 & 8  \\ \hline
+7 & 3 & 1 & 100000 & 10.104 & 16.645 & 93  \\ \hline
+7 & 3 & 2 & 100000 & 54.467 & 66.148 & 17  \\ \hline
+7 & 3 & 3 & 100000 & 6.132 & 172.827 & 6  \\ \hline
+4 & 4 & 1 & 10000 & 0.004 & 0.384 & 10  \\ \hline
+5 & 4 & 1 & 10000 & 0.148 & 1.512 & 21  \\ \hline
+5 & 4 & 2 & 10000 & 2.328 & 5.932 & 5  \\ \hline
+6 & 4 & 1 & 100000 & 23.077 & 24.345 & 85  \\ \hline
+6 & 4 & 2 & 100000 & 39.874 & 115.419 & 21  \\ \hline
+6 & 4 & 3 & 100000 & 0.156 & 406.645 & 5  \\ \hline
+7 & 4 & 1 & 10000000 & 4932.12 & 6117.92 & 341  \\ \hline
+7 & 4 & 2 & 1000000 & 1073.673 & 2720.241 & 63  \\ \hline
+7 & 4 & 3 & 1000000 & 2192.81 & 9522.332 & 14  \\ \hline
+\end{tabular}
+\caption{Limites para $c_{q}(n,R)$, obtidos pela busca tabu reativa}
+\end{center}
+\end{table}
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Limites para $c_{q}(n,R)$}
+{
+\scriptsize
+
+
+
+\begin{tabular}{cc}
+\begin{tabular}{c}
+\textbf{Table 3} \\
+\newline
+Limites para $c_{3}(n,R)$ \\
+\begin{tabular}{|c|c|c|c|}
+\hline n & R=1 & R=2 & R=3 \\ \hline
+2 & 1 & 1 & 1 \\
+3 & 3$^{a}$ & 1 & 1 \\
+4 & 4$^{b}$ & 1 & 1 \\
+5 & $^{e}$13$^{f}$ & $^{e}$4$^{d}$ & 1 \\
+6 & $^{e}$35-37$^{f}$ & $^{e}$7-8$^{f}$ & 3 $^{c}$ \\
+7 & $^{e}$78-93$^{f}$ & $^{e}$13-17 $^{f}$ & $^{e}$5-6$^{f}$ \\
+\hline
+\end{tabular}%
+\end{tabular}%
+\newline
+&
+\begin{tabular}{c}
+\textbf{Table 4} \\
+\newline
+Limites para $c_{4}(n,R)$ \\
+\begin{tabular}{|c|c|c|c|}
+\hline n & R=1 & R=2 & R=3 \\ \hline
+2 & 1 & 1 & 1 \\
+3 & 3$^{a}$ & 1 & 1 \\
+4 & $^{e}$8-10$^{f}$ & 2$^{g}$ & 1 \\
+5 & 21$^{b}$ & $^{e}$5$^{f}$ & 1 \\
+6 & $^{e}$76-85$^{f}$ & $^{e}$11-21$^{d}$ & $^{e}$3-5$^{d}$ \\
+7 & $^{e}$254-341$^{f}$ & $^{e}$27-63 $^{f}$ & $^{e}$5-14$^{f}$ \\
+\hline
+\end{tabular}%
+\end{tabular}%
+\end{tabular}
+\newline
+\newline
+{
+\scriptsize
+
+$a$ : ref. [15].\newline
+$b$ : Teorema 2.4.\newline
+$c$ : Teorema 2.7.\newline
+$d$ : $c_q(n+1,R+1) \leq c_q(n,R)$.\newline
+$e$ : limite inferior do teorema 2.3.\newline
+$f$ : limite superior obtido pelos experimentos.\newline
+$g$ : Teorema 2.6.\newline
+}
 
 }
 \end{frame}
 
+\subsection{Comparação entre as Heurísticas para Códigos de Cobertura}
+
+\begin{frame}
+  \frametitle{Comparação entre as Heurísticas para Códigos de Cobertura}
+{
+	
+\begin{itemize}
+	\item<1-> Nos experimentos realizados foram escolhidas 7 tuplas de valores para $(n,q,R)$, para cada uma delas os algoritmos foram testados tanto para $K_{q}(n,R)$ quanto para $c_{q}(n,R)$.
+	\item<2-> $(n,q,R)$: (6, 3, 1), (6, 4, 1), (6, 4, 2), (7, 3, 1), (7, 3, 2), (7, 4, 1) e (7, 4, 2).
+	\item<3-> Os testes foram baseados no número de vezes em que a busca local (busca tabu reativa ou busca tabu) é executada pela HMGC proposta.
+	\item<4-> Para cada teste foi estabelecido um tempo limite total para execução da HMGC (\textbf{T-Total}) e o número de vezes que a busca local seria executada ($n$), sendo o tempo de execução de cada busca local $T = \frac{T-Total}{n}$.
+	\item<5-> Os algoritmos foram executados para cada um dos seguintes valores de $n = \{1, 2, 5, 20, 50, 100\}$.
+\end{itemize}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Resultados para (6,4,2)}
+{
+\tiny
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $K_{4}(6,2) \leq 52$}} \\
+ \midrule
+\textbf{T-Total(s) = 500} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 500 & 1  & 65    & 9.38       & 1  & 67    & 2.31      \\
+T(s) = 250 & 2  & 65    & 19.39       & 2  & 67    & 59.11      \\
+T(s) = 100 & 5  & 64    & 82.74       & 5  & 66    & 107.89      \\
+T(s) = 25 & 20  & 66    & 5.07       & 20  & 67    & 464.69      \\
+T(s) = 10 & 50  & 65    & 13.71       & 50  & 66    & 167.05      \\
+T(s) = 5 & 100  & 64    & 20.31       & 100  & 67    & 30.00      \\
+\bottomrule  
+\end{tabular}
+\label{tabela-K(642)}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $c_{4}(6,2) \leq 21$}} \\
+ \midrule
+\textbf{T-Total(s) = 500} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 500 & 1  & 21    & 79.12       & 1  & 21    & 217.01      \\
+T(s) = 250 & 2  & 19    & 385.19       & 2  & 21    & 14.88      \\
+T(s) = 100 & 5  & \textbf{17}    & 410.59       & 5  & 21    & 29.31      \\
+T(s) = 25 & 20  & 18    & 84.11       & 20  & 21    & 15.02      \\
+T(s) = 10 & 50  & 21    & 0.87       & 50  & 21    & 29.52      \\
+T(s) = 5 & 100  & 21    & 0.25       & 100  & 21    & 18.34      \\
+\bottomrule  
+\end{tabular}
+\label{tabela-c(642)}
+\end{table}
+
+}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Resultados para (7,3,1)}
+{
+\tiny
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $K_{3}(7,1) \leq 186$}} \\
+ \midrule
+\textbf{T-Total(s) = 1000} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 1000 & 1  & 186    & 234.71       & 1  & 194    & 846.09      \\
+T(s) = 500 & 2  & 192    & 891.36       & 2  & 194    & 997.25      \\
+T(s) = 200 & 5  & 194    & 44.52       & 5  & 195    & 181.06      \\
+T(s) = 50 & 20  & 194    & 67.46       & 20  & 210    & 15.29      \\
+T(s) = 20 & 50  & 210    & 166.79       & 50  & 208    & 16.83      \\
+T(s) = 10 & 100  & 209    & 117.57       & 100  & 211    & 114.26      \\
+\bottomrule  
+\end{tabular}
+\label{tabela-K(731)}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $c_{3}(7,1) \leq 93$}} \\
+ \midrule
+\textbf{T-Total(s) = 1000} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 1000 & 1  & 93    & 5.66       & 1  & 100    & 137.75      \\
+T(s) = 500 & 2  & 101    & 52.47       & 2  & 101    & 1.97      \\
+T(s) = 200 & 5  & 101    & 37.88       & 5  & 100    & 226.91      \\
+T(s) = 50 & 20  & 97    & 48.19       & 20  & 101    & 8.81      \\
+T(s) = 20 & 50  & 97    & 2.11       & 50  & 101    & 17.61      \\
+T(s) = 10 & 100  & 102    & 2.53       & 100  & 103    & 15.95      \\
+\bottomrule  
+\end{tabular}
+\label{tabela-c(731)}
+\end{table}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Resultados para (7,4,1)}
+{
+\tiny
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $K_{4}(7,1) \leq 992$}} \\
+ \midrule
+\textbf{T-Total(s) = 1000} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 1000 & 1 & 1227    & 873.26        & 1 & 1235    & 829.01       \\
+T(s) = 500 & 2 & 1229    & 966.21        & 2  & 1232    & 851.39      \\
+T(s) = 200 & 5 & 1229    & 567.64       & 5    & 1237    & 411.73     \\
+T(s) = 50 & 20  & 1243    & 140.82        & 20  & 1264    & 43.24      \\
+T(s) = 20 & 50  & 1239    & 900.23       & 50   & 1247    & 471.19   \\
+T(s) = 10 & 100 & 1241    & 135.66       & 100   & 1254    & 170.28      \\
+\bottomrule  
+\end{tabular}
+\label{tabela-K(741)}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{c|c|c|c|c|c|c}  
+\addlinespace
+  \toprule
+\multicolumn{7}{c}{{\bf $c_{4}(7,1) \leq 341$}} \\
+ \midrule
+\textbf{T-Total(s) = 1000} & \multicolumn{3}{|c}{\textbf{BT-R}} & \multicolumn{3}{|c}{\textbf{BT}} \\
+ \midrule 
+-        & n & Melhor & Tempo(s) & n & Melhor & Tempo(s) \\
+ \midrule 
+T(s) = 1000 & 1  & 389    & 724.08       & 1   & 400    & 258.01     \\
+T(s) = 500 & 2 & 398    & 254.23       & 2     & 400    & 980.59    \\
+T(s) = 200 & 5  & 403    & 403.74       & 5   & 405    & 140.87     \\
+T(s) = 50 & 20  & 401    & 237.86       & 20   & 408    & 62.79     \\
+T(s) = 20 & 50 & 403    & 203.26       & 50     & 405    & 709.81    \\
+T(s) = 10 & 100 & 409    & 200.17       & 100  & 408    & 19.06       \\
+\bottomrule  
+\end{tabular}
+\label{tabela-c(741)}
+\end{table}
+
+}
+\end{frame}
+
+
+\section{Conclusão}
+
+\begin{frame}
+  \frametitle{Conclusão}
+{
+	
+\begin{itemize}
+	\item<1-> Neste trabalho apresentamos heurísticas para resolução de dois problemas da teoria dos códigos.
+	\item<2-> A primeira heurística apresentada foi uma aplicação da metaeurística Busca Tabu Reativa nos problemas em questão.
+	\item<3-> Os resultados obtidos pela Busca Tabu Reativa proposta se mostraram bastante efetivos para ambos os problemas estudados.
+	\item<4-> A busca foi capaz de atingir os melhores resultados da literatura utilizando pouco tempo computacional para a maioria das instâncias testadas do problema clássico.
+	\item<5> Este resultado serviu de evidência para provar a efetividade dos resultados obtidos para os códigos curtos.
+\end{itemize}
+
+}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Conclusão}
+{
+	
+\begin{itemize}
+	\item<1-> Nos resultados para os códigos curtos a busca foi capaz de provar a otimilidade de algumas instâncias e melhorar limites superiores obtidos por teoremas.
+	\item<2-> Estes resultados serviram para estabelecer os primeiros limites sobre os códigos curtos, servindo de base para os experimentos comparativos entre as heurísticas propostas. 
+	\item<3-> O trabalho também propôs uma nova heurística baseada em duas técnicas já bastante estabelecidas na área de otimização combinatória, a geração atrasada de colunas e as buscas locais: a Heurística de Melhoria via Geração de Colunas (HMGC).
+	\item<4-> De forma provar o conceito da HMGC, foi apresentada uma aplicação da mesma aos problemas de códigos de cobertura.
+	\item<5> Foram realizados experimentos comparativos entre a HMGC, a busca tabu reativa e a busca tabu clássica.
+\end{itemize}
+
+}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusão}
+{
+	
+\begin{itemize}
+	\item<1-> Os experimentos comparativos puderam concluir que a abordagem utilizando o mecanismo de reação é superior ao esquema básico da busca tabu.
+	\item<2-> Os resultados mostraram que o melhor desempenho no geral foi apresentado pela busca tabu reativa utilizada de forma isolada.
+	\item<3-> Apesar da HMGC não ter obtido os melhores resultados nos experimentos comparativos, ela contribuiu para os resultados em algumas instâncias dos problemas abordados.
+	\item<4-> Assim, se pode provar o conceito de que a HMGC é capaz de auxiliar as buscas locais a escaparem de mínimos locais através da transformação do espaço de busca baseada na geração de colunas. 
+\end{itemize}
+
+}
+\end{frame}
 
 \end{document}
