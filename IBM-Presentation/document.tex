@@ -16,8 +16,8 @@
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 %\usepackage{algorithm}                             % when including figure files
-\usepackage{sansmathaccent}
-\pdfmapfile{+sansmathaccent.map}
+%\usepackage{sansmathaccent}
+%\pdfmapfile{+sansmathaccent.map}
 \usepackage{epstopdf}
 \usepackage{epsfig}
 
@@ -492,17 +492,20 @@ is said to be a {\it dominating set} of $G$ if, for every node $v$ in $V$, eithe
 {
 	
 \begin{itemize}
-	\item<1-> Os primeiros trabalhos que usaram heurísticas de busca local para determinar limites para os códigos clássicos de cobertura utlizavam quase que exclusivamente a metaeurística \textsl{Simulated Annealing}.
+  	\item<1-> Local search has been successfully used in many papers to construct
+  	good covering codes.
+	\item<2-> Early works utilized almost exclusively \textsl{Simulated Annealing}.
 		\begin{enumerate}
 			\item Wille 1987 - $K_{3}(6,1) \leq 74$.
 			\item Van Laarhoven et al. 1989- $K_{3}(6,1) \leq 73$ e $K_{3}(7,1) \leq
 		186$.
 		\end{enumerate}
-	\item<2-> \"Osterg\aa rd 1991, Wille 1990, Aarts et. al 1992 e Van Lint 1989 obtiveram inúmeros outros recordes com o simulated annealing.
-	\item<3-> O primeiro trabalho utilizando a busca tabu para obter limites para os códigos de cobertura foi o trabalho de \"Osterg\aa rd 1997.
-	\item<4-> Neste trabalho ele mostrou que o tempo para obtenção de determinados limites poderia ser melhorado pelo uso da busca tabu.
-	\item<5-> W.A. Carnielli et. al 1998 também apresentaram uma aplicação da busca	tabu para o problema dos códigos de cobertura.
-	\item<6-> A principal diferença entre os trabalhos usando busca tabu foi o espaço de busca utilizado.
+	\item<3-> \"Osterg\aa rd 1991, Wille 1990, Aarts et. al 1992 e Van Lint 1989
+	also achieved a large number of record breaking results using \textsl{Simulated
+	Annealing}.
+	\item<4-> \"Osterg\aa rd 1997 was the first work using Tabu Search on covering
+	codes.
+	\item<5-> W.A. Carnielli et. al 1998 used a different search space and also applied tabu search on covering codes.	
 \end{itemize}
 }
 
@@ -883,22 +886,23 @@ sujeito a
 {
 	
 \begin{itemize}
-	\item<1-> Os experimentos foram dividos em duas partes: 
+	\item<1-> The experiments were divided in two parts: 
 \begin{enumerate}
-	\item<2-> Obtenção de limites iniciais para os códigos curtos de cobertura pela busca tabu reativa.
-	\item<2-> Validação da HMGC e comparação entre as heurísticas apresentadas. 
+	\item<1-> Obtaining initial short covering bounds via Reactive Tabu Search.
+	\item<2-> Validating CGIH and comparing covering codes heuristics. 
 \end{enumerate}
 
-	\item<3-> Os algoritmos foram implementados utilizando a linguagem de programação C++ e os experimentos foram realizados em um computador com processador Intel(R) Core(TM)2 Duo 2.2 GHz e 3GB de memória DDR2. 
+	\item<3-> The algorithms were implemented in C++ programming language and the
+	experiments were executed on a Intel(R) Core(TM)2 Duo with 2.2 GHz.
 	
 \end{itemize}
 }
 \end{frame}
 
-\subsection{Initial Short Coverings Bounds via Reactive Tabu Search}
+\subsection{Initial Short Covering Bounds via Reactive Tabu Search}
 
 \begin{frame}
-  \frametitle{Initial Short Coverings Bounds via Reactive Tabu Search}
+  \frametitle{Initial Short Covering Bounds via Reactive Tabu Search}
 {
 	
 \begin{itemize}
