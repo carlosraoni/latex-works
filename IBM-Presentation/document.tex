@@ -688,9 +688,10 @@ $countLastSizeChange++$. \item[-] \textbf{If} $U$ is in $Visited$.
 {
 	
 \begin{itemize}
-	\item<1-> A HMGC se baseia na geração atrasada de colunas e em heurísticas de busca local.
-	\item<2-> A principal característica da HMGC é sua estratégia de escape de mínimos locais, ela é baseada em uma transformação do espaço de busca a partir do problema de pricing da geração de colunas.
-	\item<3-> A idéia da estratégia consiste aplicar a transformação do espaço de busca e então reiniciar a busca neste novo espaço, na esperança de que nele a busca não esteja em um mínimo local e ao explorar o mesmo seja possível atingir soluções de melhor qualidade.
+	\item<1-> The CGIH is a new heuristic technique that combines a search space transformation based on delayed column generation and local search procedures.
+	\item<2-> The search space transformation is used to help the local search to escape from local minimums.
+	\item<3-> This transformation is based on the pricing problem from the delayed column generation model.
+	\item<4-> The basic strategy is to apply the search space transformation and then restart the search in this new space.
 	
 \end{itemize}
 }
@@ -704,177 +705,16 @@ $countLastSizeChange++$. \item[-] \textbf{If} $U$ is in $Visited$.
 {
 	
 \begin{itemize}
-	\item<1-> Quando as colunas da formulação da geração de colunas são soluções viáveis do problema e o problema de pricing é o próprio problema original, porém com custos diferentes dependentes dos valores das variáveis duais, podemos considerar o espaço de busca do problema de pricing como uma transformação do espaço de busca do problema original.
-	\item<2-> A transformação utilizada na HMGC é justamente esta, utiliza-se uma formulação do problema onde as colunas sejam soluções viáveis e o problema de pricing associado seja o próprio problema original, tendo apenas custos diferentes.
-	\item<3-> Um detalhe importante a ser notado na transformação do espaço de busca é que podemos aplicar esta transformação sucessivas vezes.
-	\item<4-> A transformação será ilustrada mais a frente para os problemas de códigos de cobertura.
-	
+	\item<1-> When:
+		\begin{itemize}
+		 	\item<2-> the columns of the column generation formulation are viable solutions to the problem, and
+		 	\item<3-> the pricing problem is the original problem itself, but with different costs depending on the dual variables values
+		 \end{itemize}
+	\item<4-> We can consider the search space of the pricing problem as a search space transformation of the original problem.	
+	\item<5-> We can apply this transformation successively.	
+	\item<6-> There are many ways to combine the local search with this search space transformation.
+	\item<7-> We developed a CGIH to both code covering problems using the described tabu search (with and without the reaction mechanism) as the local search.	
 \end{itemize}
-}
-\end{frame}
-
-\subsection{CGIH Algorithms}
-
-\begin{frame}
-  \frametitle{CGIH Algorithms}
-{
-	
-\begin{itemize}
-	\item<1-> Existem inúmeras formas de se combinar a busca local com a transformação do espaço de busca apresentada, de forma a tentar fugir de mínimos locais.
-	\item<2-> A HMGC é justamente esta combinação, ela não fixa a utilização da busca local nem da transformação do espaço de busca.
-	\item<3-> O trabalho exemplifica duas formas de se utilizar a HMGC, apresentando um algoritmo populacional e um baseado em transformações sucessivas do espaço de busca.
-	\item<4-> Detalhamos a seguir o algoritmo da HMGC que utiliza as sucessivas transformações do espaço de busca, já que o mesmo foi utilizado na HMGC aplicada aos códigos de cobertura.
-	
-\end{itemize}
-}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Successive Transformations Algorithm}
-{	
-{\bf Inicializações.}
-\begin{itemize}
-    \item[-] Construir uma solução inicial $Ini$.
-    \item[-] Aplicar busca local em $Ini$ coletando durante a busca um conjunto de soluções (colunas) $Col$ que obedeçam ao critério de seleção.
-    \item[-] Atribuir para $s$ o resultado da busca local.
-\end{itemize}
-}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Successive Transformations Algorithm}
-{	
-{\bf Loop Principal.} 
-\begin{itemize}
-    \item[-] Aplicar transformação no espaço de busca atual utilizando as colunas em $Col$.
-    \item[-] Aplicar busca local em $s$ no novo espaço de busca coletando durante a busca o conjunto de soluções (colunas) $Col$ que obedeçam ao critério de seleção.
-    \item[-] Se durante a busca for encontrada uma solução melhor que $s$ (com relação a função objetivo do espaço original), então atualizar $s$ para esta solução.
-    \item[-] \textbf{Se} critério de parada satisfeito
-        \begin{itemize}
-        \item[-] Retornar $s$.
-    		\end{itemize}
-\end{itemize}
-}
-\end{frame}
-
-\subsection{CGIH on Covering Codes Problems}
-
-\begin{frame}
-  \frametitle{CGIH on Covering Codes Problems}
-{
-	
-\begin{itemize}
-	\item<1-> A HMGC proposta utiliza como busca local a busca tabu reativa apresentada.
-	\item<2-> A HMGC também usa o algoritmo de sucessivas transformações do espaço de busca apresentado anteriormente.
-	\item<3-> Definimos a seguir a modelagem utilizada para geração de colunas e o critério de seleção de colunas durante a aplicação das buscas locais.
-	
-\end{itemize}
-}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Column Generation Model}
-{
-	
-\begin{equation}
-  \textrm{min} \sum_{p \in P} c(p) \lambda_p
-\end{equation}
-
-sujeito a
-
-\begin{eqnarray} 
-	\sum_{p \in P} \lambda_p = 1 \label{eq:r1domset}\\
-	\sum_{p \in P} q_{i}^{p} \lambda_p - x_{i} = 0, i = 1, ..., n \label{eq:r2domset}\\
-	\lambda_p \geq 0, p \in P \label{eq:r3domset} \\
-	x_{i} \geq 0, i = 1, ..., n
-\end{eqnarray}
-
-}
-\end{frame}
-
-\begin{frame}
-  \frametitle{The Pricing Problem}
-{
-	
-\begin{itemize}
-	\item O custo reduzido de uma coluna $\lambda_p$ é dado pelo custo do conjunto dominante $p$ subraído do somatório do valor das variáveis duais associadas a cada restrição do tipo \ref{eq:r2domset} em que $p$ tem coeficiente não-nulo, o que corresponde as restrições sobre os vértices $i$ que fazem parte de $p$.
-	\item Podemos então decompor o custo reduzido de $p$ por cada vértice que faz parte do mesmo.
-\end{itemize}
-	
-\begin{equation}
-\label{redcostdomset}
-	c'(p) = \sum_{i \in p} cv'(i)
-\end{equation}   
-\begin{equation}
-\label{vertexcost}
-	cv'(i) = 1 - d(i)
-\end{equation}
-	
-
-\begin{itemize}
-	\item Assim o problema de pricing corresponde a encontrar o conjunto dominante $p$ em $G$ com menor somatório de custos por vértice $i$ de $p$, sendo o custo por vértice $i$ igual a $cv'(i)$.
-\end{itemize}
-
-}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Avoiding Solvers Use}
-{
-	
-\begin{itemize}
-	\item<1-> Analisando a transformação do espaço de busca da HMGC percebemos a necessidade de obtenção de valores ótimos para as variáveis duais de forma a se criar o problema de pricing.
-	\item<2-> A obtenção destes valores pode ser feita pela resolução do problema primal de geração de colunas utilizando resolvedores de programas lineares.
-	\item<3-> Uma maneira de tentar evitar o uso dos resolvedores é analisar diretamente o problema dual ao problema primal da geração de colunas e tentar desenvolver um algoritmo para resolver diretamente este problema, de forma a obter os valores ótimos das variáveis duais.
-	
-\end{itemize}
-}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Avoiding Solvers Use}
-{
-	
-\begin{equation}
-  \textrm{max} L
-\end{equation}
-
-sujeito a
-
-\begin{eqnarray} 
-	\sum_{i \in p} d(i) + L \leq c(p) \label{eq:slack}, p \in P\\
-	d(i) \geq 0, i = 1, ..., n
-\end{eqnarray}
-
-\begin{itemize}
-	\item No trabalho apresentamos um algoritmo trivial para atribuição de valores ótimos às variáveis duais.
-\end{itemize}
-
-}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Column Selection Criteria}
-{
-	
-\begin{itemize}
-	\item A cada iteração da busca tabu reativa se verifica se a solução atual $s$ é viável, ou seja, se é um conjunto dominante. Caso $s$ seja viável é calculado o grau de similaridade de $s$ com relação as soluções $p$ pertencentes a $Col$.
-	
-\end{itemize}
-
-\begin{equation}
-\label{eq:similaridade}
-	G(s) = \frac{|E|}{|S \cup P|}
-\end{equation}
-
-\begin{itemize}
-	\item Se existir algum $p \in Col$ para qual o grau de similaridade $G(s,p)$ seja maior que um determinado treshold $t$, então $s$ não é inserido em $Col$, caso contrário $s$ é incluído em $Col$.
-	\item A idéia é tentar manter em $Col$ soluções representativas das regiões do espaço explorado pela busca, evitando o armazenamento de soluções similares.
-\end{itemize}	
-	
 }
 \end{frame}
 
@@ -1259,5 +1099,16 @@ T(s) = 10 & 100 & 409    & 200.17       & 100  & 408    & 19.06       \\
 
 }
 \end{frame}
+
+\begin{frame}
+{
+	
+\begin{center}
+	{\LARGE Thank You!}
+\end{center}
+
+}
+\end{frame}
+
 
 \end{document}
